@@ -1,0 +1,99 @@
+{
+  "last_node_id": 3,
+  "last_link_id": 1,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [100, 200],
+      "size": [320, 310],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": ["example.png", "image"],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [1],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "TencentHunyuan3DAPI",
+      "pos": [500, 200],
+      "size": [400, 260],
+      "properties": {
+        "Node name for S&R": "TencentHunyuan3DAPI"
+      },
+      "widgets_values": [
+        "YOUR_SECRET_ID",
+        "YOUR_SECRET_KEY",
+        "3.1",
+        "Normal",
+        500000,
+        true,
+        "ap-guangzhou",
+        ""
+      ],
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model_filepath",
+          "type": "STRING",
+          "links": [2],
+          "slot_index": 0
+        },
+        {
+          "name": "result_url",
+          "type": "STRING",
+          "links": null
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "ShowText|pysssss",
+      "pos": [960, 200],
+      "size": [320, 140],
+      "properties": {},
+      "widgets_values": [""],
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 2,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ]
+    }
+  ],
+  "links": [
+    [1, 1, 0, 2, 0, "IMAGE"],
+    [2, 2, 0, 3, 0, "STRING"]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [0, 0]
+    }
+  },
+  "version": 0.4
+}
