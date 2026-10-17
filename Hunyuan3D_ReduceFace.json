@@ -1,0 +1,89 @@
+{
+  "1": {
+    "inputs": {
+      "image": "example.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "2": {
+    "inputs": {
+      "secret_id": "YOUR_SECRET_ID",
+      "secret_key": "YOUR_SECRET_KEY",
+      "model_version": "3.1",
+      "generate_type": "Geometry",
+      "face_count": 500000,
+      "enable_pbr": false,
+      "region": "ap-guangzhou",
+      "prompt": "",
+      "result_format": "default",
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "TencentHunyuan3DAPI",
+    "_meta": {
+      "title": "🧊 Hunyuan 3D Generate"
+    }
+  },
+  "3": {
+    "inputs": {
+      "secret_id": "YOUR_SECRET_ID",
+      "secret_key": "YOUR_SECRET_KEY",
+      "model_format": "AUTO",
+      "face_level": "high",
+      "polygon_type": "quadrilateral",
+      "region": "ap-guangzhou",
+      "model_url": [
+        "2",
+        1
+      ]
+    },
+    "class_type": "Hunyuan3DReduceFace",
+    "_meta": {
+      "title": "📐 Hunyuan 3D Reduce Face"
+    }
+  },
+  "7": {
+    "inputs": {
+      "model_filepath": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "Hunyuan3DPreview",
+    "_meta": {
+      "title": "👁️ Hunyuan 3D Preview"
+    }
+  },
+  "8": {
+    "inputs": {
+      "save_directory": "C:\\Users\\boxca\\Documents\\Hunyuan3D_Output",
+      "filename_prefix": "Hunyuan_Quad",
+      "overwrite": true,
+      "model_filepath": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "Hunyuan3DSave",
+    "_meta": {
+      "title": "💾 Hunyuan 3D Save Model"
+    }
+  },
+  "9": {
+    "inputs": {
+      "text": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  }
+}
