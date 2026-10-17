@@ -1,0 +1,123 @@
+{
+  "1": {
+    "inputs": {
+      "image": "example.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "2": {
+    "inputs": {
+      "secret_id": "YOUR_SECRET_ID",
+      "secret_key": "YOUR_SECRET_KEY",
+      "face_count": 500000,
+      "region": "ap-guangzhou",
+      "front": [
+        "1",
+        0
+      ],
+      "left": [
+        "10",
+        0
+      ],
+      "right": [
+        "11",
+        0
+      ],
+      "back": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "TencentHunyuan31MultiView",
+    "_meta": {
+      "title": "Hunyuan3D 3.1 MultiView (Geometry)"
+    }
+  },
+  "3": {
+    "inputs": {
+      "secret_id": "YOUR_SECRET_ID",
+      "secret_key": "YOUR_SECRET_KEY",
+      "model_format": "AUTO",
+      "face_level": "high",
+      "polygon_type": "quadrilateral",
+      "region": "ap-guangzhou",
+      "model_url": [
+        "2",
+        1
+      ]
+    },
+    "class_type": "Hunyuan3DReduceFace",
+    "_meta": {
+      "title": "📐 Hunyuan 3D Reduce Face"
+    }
+  },
+  "7": {
+    "inputs": {
+      "model_filepath": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "Hunyuan3DPreview",
+    "_meta": {
+      "title": "👁️ Hunyuan 3D Preview"
+    }
+  },
+  "8": {
+    "inputs": {
+      "save_directory": "C:\\Users\\boxca\\Documents\\ND\\ComfyUI_windows_portable_nvidia\\ComfyUI_windows_portable\\ComfyUI\\output",
+      "filename_prefix": "Hunyuan_Quad",
+      "overwrite": true,
+      "model_filepath": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "Hunyuan3DSave",
+    "_meta": {
+      "title": "💾 Hunyuan 3D Save Model"
+    }
+  },
+  "9": {
+    "inputs": {
+      "text": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Show Text 🐍"
+    }
+  },
+  "10": {
+    "inputs": {
+      "image": "example.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "11": {
+    "inputs": {
+      "image": "example.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "12": {
+    "inputs": {
+      "image": "example.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  }
+}
