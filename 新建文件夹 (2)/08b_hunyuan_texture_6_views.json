@@ -1,0 +1,122 @@
+{
+  "1": {
+    "inputs": {
+      "value": ""
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "Model URL (OBJ/GLB, untextured)"
+    }
+  },
+  "2": {
+    "inputs": {
+      "image": "front.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "View: front"
+    }
+  },
+  "3": {
+    "inputs": {
+      "image": "left.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "View: left"
+    }
+  },
+  "4": {
+    "inputs": {
+      "image": "right.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "View: right"
+    }
+  },
+  "5": {
+    "inputs": {
+      "image": "back.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "View: back"
+    }
+  },
+  "6": {
+    "inputs": {
+      "image": "left_front.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "View: left_front"
+    }
+  },
+  "7": {
+    "inputs": {
+      "image": "right_front.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "View: right_front"
+    }
+  },
+  "8": {
+    "inputs": {
+      "secret_id": "",
+      "secret_key": "",
+      "model_url": [
+        "1",
+        0
+      ],
+      "model_format": "AUTO",
+      "enable_pbr": true,
+      "enable_keep_uv": false,
+      "texture_size": 4096,
+      "jpeg_quality": 92,
+      "region": "ap-guangzhou",
+      "front": [
+        "2",
+        0
+      ],
+      "left": [
+        "3",
+        0
+      ],
+      "right": [
+        "4",
+        0
+      ],
+      "back": [
+        "5",
+        0
+      ],
+      "left_front": [
+        "6",
+        0
+      ],
+      "right_front": [
+        "7",
+        0
+      ],
+      "job_id": ""
+    },
+    "class_type": "Hunyuan3DTextureMultiView",
+    "_meta": {
+      "title": "🎨 Hunyuan3D Texture (Multi-View)"
+    }
+  },
+  "9": {
+    "inputs": {
+      "model_filepath": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "Hunyuan3DPreview",
+    "_meta": {
+      "title": "👁️ Preview Textured"
+    }
+  }
+}

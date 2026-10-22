@@ -1,0 +1,42 @@
+{
+  "1": {
+    "inputs": {
+      "value": ""
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "Model URL"
+    }
+  },
+  "5": {
+    "inputs": {
+      "secret_id": "",
+      "secret_key": "",
+      "model_format": "GLB",
+      "face_level": "low",
+      "polygon_type": "quadrilateral",
+      "region": "ap-guangzhou",
+      "model_url": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "Hunyuan3DReduceFace",
+    "_meta": {
+      "title": "📐 Hunyuan3D Reduce Face"
+    }
+  },
+  "6": {
+    "inputs": {
+      "model_file": [
+        "5",
+        0
+      ],
+      "image": ""
+    },
+    "class_type": "Preview3D",
+    "_meta": {
+      "title": "Preview Reduced 3D"
+    }
+  }
+}

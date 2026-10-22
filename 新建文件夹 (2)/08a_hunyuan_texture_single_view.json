@@ -1,0 +1,70 @@
+{
+  "1": {
+    "inputs": {
+      "value": ""
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "Model URL (OBJ/GLB, untextured)"
+    }
+  },
+  "2": {
+    "inputs": {
+      "image": "example.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Reference Image"
+    }
+  },
+  "3": {
+    "inputs": {
+      "secret_id": "",
+      "secret_key": "",
+      "model_format": "AUTO",
+      "model_version": "3.1",
+      "enable_pbr": true,
+      "enable_keep_uv": false,
+      "texture_size": 4096,
+      "region": "ap-guangzhou",
+      "prompt": "",
+      "model_url": [
+        "1",
+        0
+      ],
+      "reference_image": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "Hunyuan3DTexture",
+    "_meta": {
+      "title": "🎨 Hunyuan3D Texture"
+    }
+  },
+  "4": {
+    "inputs": {
+      "model_filepath": [
+        "3",
+        0
+      ]
+    },
+    "class_type": "Hunyuan3DPreview",
+    "_meta": {
+      "title": "👁️ Preview Textured"
+    }
+  },
+  "5": {
+    "inputs": {
+      "filename_prefix": "HY3D_basecolor",
+      "images": [
+        "3",
+        2
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Base Color (use this for Krea 2 image-to-image)"
+    }
+  }
+}

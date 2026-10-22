@@ -1,0 +1,40 @@
+{
+  "1": {
+    "inputs": {
+      "value": ""
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "Model URL (FBX)"
+    }
+  },
+  "5": {
+    "inputs": {
+      "secret_id": "",
+      "secret_key": "",
+      "region": "ap-guangzhou",
+      "part_segmentation_info": "",
+      "enable_staged_generation": false,
+      "model_url": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "Hunyuan3DPartSegmentation",
+    "_meta": {
+      "title": "✂️ Hunyuan3D Part Split"
+    }
+  },
+  "6": {
+    "inputs": {
+      "model_filepath": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "Hunyuan3DPreview",
+    "_meta": {
+      "title": "👁️ Preview Parts (coloured by part)"
+    }
+  }
+}
