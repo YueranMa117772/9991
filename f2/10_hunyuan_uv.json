@@ -1,0 +1,52 @@
+{
+  "1": {
+    "inputs": {
+      "value": ""
+    },
+    "class_type": "PrimitiveString",
+    "_meta": {
+      "title": "Model URL (FBX/OBJ/GLB, < 30000 faces)"
+    }
+  },
+  "2": {
+    "inputs": {
+      "secret_id": "",
+      "secret_key": "",
+      "model_format": "AUTO",
+      "region": "ap-guangzhou",
+      "model_url": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "Hunyuan3DUVUnwrap",
+    "_meta": {
+      "title": "🗺️ Hunyuan3D UV Unwrap (Semantic UV)"
+    }
+  },
+  "3": {
+    "inputs": {
+      "model_filepath": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "Hunyuan3DPreview",
+    "_meta": {
+      "title": "👁️ Preview UV Model"
+    }
+  },
+  "4": {
+    "inputs": {
+      "filename_prefix": "HY3D_uv",
+      "images": [
+        "2",
+        3
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "UV Map"
+    }
+  }
+}

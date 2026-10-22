@@ -1,0 +1,69 @@
+{
+  "1": {
+    "inputs": {
+      "image": "example.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "2": {
+    "inputs": {
+      "secret_id": "",
+      "secret_key": "",
+      "model_version": "3.1",
+      "generate_type": "Geometry",
+      "face_count": 150000,
+      "enable_pbr": false,
+      "region": "ap-guangzhou",
+      "prompt": "",
+      "result_format": "default",
+      "image": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "TencentHunyuan3DAPI",
+    "_meta": {
+      "title": "🧊 Hunyuan 3D Generate"
+    }
+  },
+  "3": {
+    "inputs": {
+      "text": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Local GLB Path"
+    }
+  },
+  "4": {
+    "inputs": {
+      "model_file": [
+        "2",
+        0
+      ],
+      "image": ""
+    },
+    "class_type": "Preview3D",
+    "_meta": {
+      "title": "Preview 3D & Animation"
+    }
+  },
+  "7": {
+    "inputs": {
+      "text": [
+        "2",
+        1
+      ]
+    },
+    "class_type": "ShowText|pysssss",
+    "_meta": {
+      "title": "Model URL (copy this for Reduce Face)"
+    }
+  }
+}
